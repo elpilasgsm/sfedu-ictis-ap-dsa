@@ -39,7 +39,7 @@ CMakeCache.txt
 *.cmake
 Testing/
 *.cbp
-
+sfedu_ictis_ap_dsa
 
 #implementations
 Array.cpp

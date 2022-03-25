@@ -6,7 +6,6 @@
 #include "Tests.h"
 #include "Array.cpp"
 
-
 void print(Array<int> *arr) {
     printf("\n");
     for (int i = 0; i < arr->size; i++) {

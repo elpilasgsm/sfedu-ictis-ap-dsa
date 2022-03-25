@@ -6,7 +6,6 @@
 
 
 int main() {
-
     int errors = ArrayTestsNS::testInsert();
     errors += ArrayTestsNS::testFind();
     return errors;
