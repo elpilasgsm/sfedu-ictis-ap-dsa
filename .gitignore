@@ -37,6 +37,9 @@ Makefile
 CMakeFiles/
 CMakeCache.txt
 *.cmake
+Testing/
+*.cbp
+
 
 #implementations
 Array.cpp
