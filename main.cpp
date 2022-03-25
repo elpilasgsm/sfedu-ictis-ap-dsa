@@ -1,11 +1,13 @@
 //
 // Created by sfedu on 3/25/22.
 //
-#include "TestData.h"
 #include "Tests.h"
+#include "TestData.h"
 
-int main(){
-    ArrayTestsNS::testInsert();
-    ArrayTestsNS::testFind();
-    return 0;
+
+int main() {
+
+    int errors = ArrayTestsNS::testInsert();
+    errors += ArrayTestsNS::testFind();
+    return errors;
 }

@@ -33,5 +33,10 @@
 
 .idea/
 cmake-build-debug/
+Makefile
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+
 #implementations
 Array.cpp

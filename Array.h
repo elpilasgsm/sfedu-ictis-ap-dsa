@@ -12,8 +12,8 @@ template <typename TYPE> struct Array{
 
 namespace ArrayNS {
     template <typename TYPE> Array<TYPE> *newArray(int size);
-    template <typename TYPE> void insertToArray(Array<TYPE> *arr, TYPE value, int index);
-    template <typename TYPE> TYPE &find(Array<TYPE> *arr, TYPE value);
+    template <typename TYPE> int insertToArray(Array<TYPE> *arr, TYPE value, int index);
+    template <typename TYPE> TYPE *find(Array<TYPE> *arr, TYPE value);
     template <typename TYPE> void deleteArray(Array<TYPE> *arr);
 };
 

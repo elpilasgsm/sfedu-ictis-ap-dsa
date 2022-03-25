@@ -11,6 +11,7 @@ namespace ArrayTestsNS {
     int testInsert();
 
     int testFind();
+
 }
 
 
