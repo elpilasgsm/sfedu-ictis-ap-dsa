@@ -1,10 +1,10 @@
 //
 // Created by sfedu on 3/25/22.
 //
-#include <stdlib.h>
-#include <stdio.h>
+#include <cstdlib>
+#include <cstdio>
 #include "Tests.h"
-#include "Array.cpp"
+#include "ArrayTestImpl.h"
 
 void print(Array<int> *arr) {
     printf("\n");
@@ -26,7 +26,7 @@ void rand(Array<int> *arr) {
 
 int ArrayTestsNS::testFind() {
     int errors = 0;
-    int size = 5;
+    const int size = rand() % 100 + 50;
     Array<int> *arr = ArrayNS::newArray<int>(size);
     rand(arr);
     if (arr == nullptr) {
