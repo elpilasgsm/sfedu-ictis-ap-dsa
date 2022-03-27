@@ -53,7 +53,7 @@ void PerformanceTestsNS::arrayPerformanceTest() {
     for (int test = 0; test < sizesArray; test++) {
         int numOfArr = sizes[test];
         Array<int> *arr = rand(numOfArr);
-        int numOfRepeations = (int) ((double) numOfArr * seriasRate);
+        int numOfRepeations = seriasRate;
         long timeForSearch = 0;
         long timeForInsert = 0;
         for (int iter = 0; iter < numOfRepeations; iter++) {

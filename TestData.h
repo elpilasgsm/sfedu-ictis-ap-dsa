@@ -10,4 +10,4 @@
 const int sizes[] = {10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000};
 
 const int sizesArray = sizeof (sizes)/sizeof (int);
-const double seriasRate = 0.7;
+const int seriasRate = 5000;
