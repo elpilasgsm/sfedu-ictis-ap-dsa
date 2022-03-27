@@ -43,3 +43,5 @@ sfedu_ictis_ap_dsa
 
 #implementations
 Array.cpp
+venv/
+*.csv

@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <cstdio>
 #include "Tests.h"
-#include "ArrayTestImpl.h"
 
 void print(Array<int> *arr) {
     printf("\n");
@@ -21,7 +20,7 @@ void rand(Array<int> *arr) {
     for (int i = 0; i < arr->size; i++) {
         arr->array[i] = rand() % 1000;
     }
-    print(arr);
+    //print(arr);
 }
 
 int ArrayTestsNS::testFind() {
