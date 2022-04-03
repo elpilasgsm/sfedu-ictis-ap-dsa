@@ -56,4 +56,4 @@ namespace ArrayNS {
     void deleteArray(Array<TYPE> *arr);
 };
 
-#endif SFEDU_ICTIS_AP_DSA_ARRAY_H
+#endif

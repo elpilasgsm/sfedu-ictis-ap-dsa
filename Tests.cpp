@@ -103,3 +103,20 @@ int ArrayTestsNS::testInsert() {
     ArrayNS::deleteArray(arr);
     return errors;
 }
+
+int StackTestsNS::test() {
+    int errors = 0;
+    const int size = rand() % 100 + 50;
+    Array<int> *arr = ArrayNS::newArray<int>(size);
+    rand(arr);
+
+    auto *stack = new Stack<int>;
+    for (int i = 0; i < arr->size; i++) {
+        StackNS::push(stack, arr->array[i]);
+    }
+    for (int i = 0; i < arr->size / 2; i++) {
+        auto val = arr->array[arr->size - 1 - i];
+        errors += (val != StackNS::pop(stack)->key);
+    }
+    return errors;
+}

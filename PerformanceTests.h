@@ -6,11 +6,13 @@
 #define SFEDU_ICTIS_AP_DSA_PERFORMANCETESTS_H
 
 #include "ArrayTestImpl.h"
+#include "StackTestImpl.h"
 #include "TestData.h"
 
 namespace PerformanceTestsNS
 {
     void arrayPerformanceTest();
+    void stackPerformanceTest();
 };
 
 

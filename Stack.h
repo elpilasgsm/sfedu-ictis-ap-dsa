@@ -56,4 +56,4 @@ namespace StackNS {
     void deleteStack(Stack<TYPE> *stack);
 };
 
-#endif SFEDU_ICTIS_AP_DSA_STACK_H
+#endif

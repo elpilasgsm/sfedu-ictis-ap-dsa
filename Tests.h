@@ -6,10 +6,15 @@
 #define SFEDU_ICTIS_AP_DSA_TESTS_H
 
 #include "ArrayTestImpl.h"
+#include "StackTestImpl.h"
 
 namespace ArrayTestsNS {
     int testInsert();
     int testFind();
+}
+
+namespace StackTestsNS {
+    int test();
 }
 
 
