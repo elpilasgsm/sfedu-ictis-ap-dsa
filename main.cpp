@@ -1,8 +1,8 @@
 //
 // Created by sfedu on 3/25/22.
 //
-#include "Tests.h"
-#include "PerformanceTests.h"
+#include "tests/Tests.h"
+#include "performance-tests/PerformanceTests.h"
 #include <iostream>
 
 int main() {
@@ -21,6 +21,13 @@ int main() {
         return errors;
     }
     std::cout << "Stack Tests passed successfully. " << std::endl;
+
+    errors += QueueTestsNS::test();
+    if (errors > 0) {
+        std::cerr << "Queue Tests failed with " << errors << " errors" << std::endl;
+        return errors;
+    }
+    std::cout << "Queue Tests passed successfully. " << std::endl;
 
     //Run stress testing for graphics.
     PerformanceTestsNS::arrayPerformanceTest();

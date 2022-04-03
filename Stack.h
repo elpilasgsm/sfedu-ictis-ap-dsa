@@ -31,9 +31,9 @@ namespace StackNS {
     /**
      * TODO implement function that insert @value to the head of @stack
      * @tparam TYPE the type of stored in stack information.
-     * @param stack the pointer to stack where we should push @value
+     * @param stack the pointer to stack where we should enqueue @value
      * @param value  the value that we should insert to the head of @stack
-     * @return 0 - if value was not inserted or 1 - if push was succeed
+     * @return 0 - if value was not inserted or 1 - if enqueue was succeed
      */
     template<typename TYPE>
     int push(Stack<TYPE> *stack, TYPE value);
@@ -41,7 +41,7 @@ namespace StackNS {
     /**
      * TODO implement function that get @value from the head of @stack
      * @tparam TYPE the type of stored in stack information.
-     * @param stack the pointer to stack where we should push @value
+     * @param stack the pointer to stack where we should enqueue @value
      * @return address (pointer) to the @StackNode from the head or null if the @stack is empty.
      */
     template<typename TYPE>

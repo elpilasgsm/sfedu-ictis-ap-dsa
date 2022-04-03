@@ -120,3 +120,21 @@ int StackTestsNS::test() {
     }
     return errors;
 }
+
+
+int QueueTestsNS::test() {
+    int errors = 0;
+    const int size = rand() % 100 + 50;
+    Array<int> *arr = ArrayNS::newArray<int>(size);
+    rand(arr);
+
+    auto *q = new Queue<int>;
+    for (int i = 0; i < arr->size; i++) {
+        QueueNS::enqueue(q, arr->array[i]);
+    }
+    for (int i = 0; i < arr->size / 2; i++) {
+        auto val = arr->array[ i];
+        errors += (val != QueueNS::dequeue(q)->key);
+    }
+    return errors;
+}

@@ -43,22 +43,18 @@ Extra information about Data Structures can be found in [CS50 lecture](https://w
 
 #### 2. Coding
 
-In your forked project in the file [main.cpp](main.cpp#L87) please implement methods market with
+In your forked project you must create the following files and implement methods from the namespaces from the corresponding H files
+The following table decribes the H files and required cpp files created with implementation.
 
-```//TODO```
+| #   | H file (exists) | CPP file (must be created by student) | Namespace with function prototypes | 
+|-----|-----------------|---------------------------------------|------------------------------------| 
+| 1   | Array.h         | Array.cpp | ArrayNS |
+| 2   | Stack.h         | Stack.cpp | StackNS |
+| 3   | List.h          | List.cpp | ListNS |
+| 4   | Queue.h         | Queue.cpp | QueueNS |
+| 5   | BST.h           | BST.cpp | BSTNS |
 
-There is also
-
-```//PUT YOUR CODE HERE```
-
-placeholder in the code. You should write code only in these places. If required you can add more ```#include``` to the
-file, but the existed are enough to complete the task.
-
-There are ### functions that you should implement to complete the lab.
-
-
-| # | Function | Description | Near line | 
-| --- | -------- | ----------- | --------- | 
+Student also should follow the TODO description near each function prototypes.
 
 #### 3. Validate code
 
@@ -68,7 +64,7 @@ Push your code to the remote repository (origin). The following approaches can b
 
 ```shell
     git commit -am "My code"
-    git push 
+    git enqueue 
 ```
 - In CLion  click 'Ctrl' + 'K', fill the commit description, choose changed files and click 'Commit' button.
   After click 'Ctrl' + 'Shift' + 'K' and click 'Push' button.

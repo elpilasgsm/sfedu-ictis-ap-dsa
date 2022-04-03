@@ -5,8 +5,9 @@
 #ifndef SFEDU_ICTIS_AP_DSA_TESTS_H
 #define SFEDU_ICTIS_AP_DSA_TESTS_H
 
-#include "ArrayTestImpl.h"
-#include "StackTestImpl.h"
+#include "tests/ArrayTestImpl.h"
+#include "tests/StackTestImpl.h"
+#include "tests/QueueTestImpl.h"
 
 namespace ArrayTestsNS {
     int testInsert();
@@ -14,6 +15,10 @@ namespace ArrayTestsNS {
 }
 
 namespace StackTestsNS {
+    int test();
+}
+
+namespace QueueTestsNS {
     int test();
 }
 
