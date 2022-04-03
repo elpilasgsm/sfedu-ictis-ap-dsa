@@ -42,6 +42,10 @@ Testing/
 sfedu_ictis_ap_dsa
 
 #implementations
-Array.cpp
+
 venv/
 *.csv
+
+#Delete before final version
+Array.cpp
+Stack.cpp
