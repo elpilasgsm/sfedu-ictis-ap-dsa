@@ -29,7 +29,14 @@ int main() {
     }
     std::cout << "Queue Tests passed successfully. " << std::endl;
 
+    errors += ListTestsNS::test();
+    if (errors > 0) {
+        std::cerr << "Lists Tests failed with " << errors << " errors" << std::endl;
+        return errors;
+    }
+    std::cout << "List Tests passed successfully. " << std::endl;
+
     //Run stress testing for graphics.
-    PerformanceTestsNS::arrayPerformanceTest();
+    //PerformanceTestsNS::arrayPerformanceTest();
     return errors;
 }

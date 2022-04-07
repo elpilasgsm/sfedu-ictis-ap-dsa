@@ -8,9 +8,11 @@
 #include "tests/ArrayTestImpl.h"
 #include "tests/StackTestImpl.h"
 #include "tests/QueueTestImpl.h"
+#include "tests/ListTestImpl.h"
 
 namespace ArrayTestsNS {
     int testInsert();
+
     int testFind();
 }
 
@@ -19,6 +21,10 @@ namespace StackTestsNS {
 }
 
 namespace QueueTestsNS {
+    int test();
+}
+
+namespace ListTestsNS {
     int test();
 }
 

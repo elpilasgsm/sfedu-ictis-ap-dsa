@@ -3,6 +3,7 @@
 //
 #include <cstdlib>
 #include <cstdio>
+#include <iostream>
 #include "Tests.h"
 
 void print(Array<int> *arr) {
@@ -110,7 +111,7 @@ int StackTestsNS::test() {
     Array<int> *arr = ArrayNS::newArray<int>(size);
     rand(arr);
 
-    auto *stack = new Stack<int>;
+    auto *stack = StackNS::newStack<int>();
     for (int i = 0; i < arr->size; i++) {
         StackNS::push(stack, arr->array[i]);
     }
@@ -118,6 +119,8 @@ int StackTestsNS::test() {
         auto val = arr->array[arr->size - 1 - i];
         errors += (val != StackNS::pop(stack)->key);
     }
+    StackNS::deleteStack(stack);
+    ArrayNS::deleteArray(arr);
     return errors;
 }
 
@@ -128,13 +131,42 @@ int QueueTestsNS::test() {
     Array<int> *arr = ArrayNS::newArray<int>(size);
     rand(arr);
 
-    auto *q = new Queue<int>;
+    auto *q = QueueNS::newQueue<int>();
     for (int i = 0; i < arr->size; i++) {
         QueueNS::enqueue(q, arr->array[i]);
     }
     for (int i = 0; i < arr->size / 2; i++) {
-        auto val = arr->array[ i];
+        auto val = arr->array[i];
         errors += (val != QueueNS::dequeue(q)->key);
     }
+    QueueNS::deleteQueue(q);
+    ArrayNS::deleteArray(arr);
     return errors;
+}
+
+int ListTestsNS::test() {
+    int errors = 0;
+    auto *arr = ArrayNS::newArray<int>(rand() % 100 + 50);
+    rand(arr);
+    auto *list = ListNS::newList<int>();
+    for (int i = 0; i < arr->size; i++) {
+        ListNS::addAsAFirst(list, i);
+        ListNS::addAsALast(list, i + arr->size);
+    }
+
+    for (int i = 0; i < 2 * arr->size; i++) {
+        int rndIndex = rand() % 2 * arr->size;
+        auto *found = ListNS::find(list, arr->array[rndIndex]);
+        if (found == nullptr) {
+            std::cerr << "ListNS -> find function works wrongly ";
+            errors++;
+            break;
+        }
+
+    }
+
+    ArrayNS::deleteArray(arr);
+    ListNS::deleteList(list);
+    return errors;
+
 }

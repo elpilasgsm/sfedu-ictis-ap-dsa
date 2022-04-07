@@ -1,6 +1,8 @@
-//
-// Created by elpil on 03.04.2022.
-//
+/**
+ * This is Queue Data Structure implementation. Student must implement all functions from QueueNS namespace.
+ * Please check the description of each function before function prototype.
+ * THe implementation must be located in file Queue.cpp
+ */
 
 #ifndef SFEDU_ICTIS_AP_DSA_QUEUE_H
 #define SFEDU_ICTIS_AP_DSA_QUEUE_H
