@@ -38,7 +38,14 @@ int main() {
 
     //Run stress testing for graphics.
     PerformanceTestsNS::arrayPerformanceTest();
+    std::cout << "arrayPerformanceTest passed successfully. " << std::endl;
     PerformanceTestsNS::stackPerformanceTest();
+    std::cout << "stackPerformanceTest passed successfully. " << std::endl;
     PerformanceTestsNS::queuePerformanceTest();
+    std::cout << "queuePerformanceTest passed successfully. " << std::endl;
+    PerformanceTestsNS::listPerformanceTest();
+    std::cout << "listPerformanceTest passed successfully. " << std::endl;
+
+
     return errors;
 }
