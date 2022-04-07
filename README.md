@@ -63,7 +63,7 @@ Push your code to the remote repository (origin). The following approaches can b
 
 ```shell
     git commit -am "My code"
-    git enqueue 
+    git push 
 ```
 - In CLion  click 'Ctrl' + 'K', fill the commit description, choose changed files and click 'Commit' button.
   After click 'Ctrl' + 'Shift' + 'K' and click 'Push' button.
@@ -77,5 +77,5 @@ than your code passed all tests and lab is done properly, otherwise you should c
 Click at the latest 'green' workflow at the 'Actions' page. Scroll down to the 'Artifacts' group. In the 'Artifacts' group
 you will find 'execution-results' package (clickable).
 ![results](./imgs/results.png)
-Click it to retrieve the results. The zip file contains 3 csv files with
+Click it to retrieve the results. The zip file contains CSV files with
 execution time and the png file with the graph that you should include to the Lab report. 
