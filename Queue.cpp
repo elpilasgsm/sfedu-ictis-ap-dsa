@@ -45,6 +45,7 @@ int QueueNS::enqueue(Queue<TYPE> *queue, TYPE value) {
     if (queue->head == nullptr) {
         queue->head = queue->tail;
     }
+    return 1;
 }
 
 /**

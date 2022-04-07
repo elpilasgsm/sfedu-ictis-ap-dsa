@@ -42,6 +42,7 @@ int ListNS::addAsAFirst(DoublyList<TYPE> *list, TYPE value) {
     if (list->tail == nullptr) {
         list->tail = list->head;
     }
+    return 1;
 }
 
 /**
@@ -68,6 +69,7 @@ int ListNS::addAsALast(DoublyList<TYPE> *list, TYPE value) {
     if (list->head == nullptr) {
         list->head = list->tail;
     }
+    return 1;
 }
 
 /**

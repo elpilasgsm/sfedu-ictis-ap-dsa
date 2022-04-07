@@ -37,6 +37,7 @@ int ArrayNS::insertToArray(Array<TYPE> *arr, TYPE value, int index) {
         return 0;
     }
     arr->array[index] = value;
+    return 1;
 }
 
 /**
