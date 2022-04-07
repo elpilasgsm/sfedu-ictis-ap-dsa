@@ -7,6 +7,8 @@
 
 #include "tests/ArrayTestImpl.h"
 #include "tests/StackTestImpl.h"
+#include "tests/QueueTestImpl.h"
+#include "tests/ListTestImpl.h"
 #include "tests/TestData.h"
 
 namespace PerformanceTestsNS {
@@ -15,6 +17,8 @@ namespace PerformanceTestsNS {
     void stackPerformanceTest();
 
     void queuePerformanceTest();
+
+    void listPerformanceTest();
 };
 
 
