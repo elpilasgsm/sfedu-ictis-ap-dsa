@@ -52,7 +52,6 @@ The following table decribes the H files and required cpp files created with imp
 | 2   | Stack.h         | Stack.cpp | StackNS |
 | 3   | List.h          | List.cpp | ListNS |
 | 4   | Queue.h         | Queue.cpp | QueueNS |
-| 5   | BST.h           | BST.cpp | BSTNS |
 
 Student also should follow the TODO description near each function prototypes.
 
