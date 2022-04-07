@@ -134,3 +134,23 @@ void PerformanceTestsNS::queuePerformanceTest() {
         QueueNS::deleteQueue(queue);
     }
 }
+
+void PerformanceTestsNS::listPerformanceTest() {
+    createEmptyFile("List.csv");
+    for (int test = 0; test < sizesArray; test++) {
+        int numOfArr = sizes[test];
+        auto *queue = QueueNS::newQueue<int>();
+        int numOfRepeations = (int) (seriasRate * (float) numOfArr);
+        long timeForSearch = 0;
+        long timeForInsert = 0;
+        for (int iter = 0; iter < numOfRepeations; iter++) {
+            timeForSearch += checkEnqueueTime(queue);
+            timeForInsert += checkEnqueueTime(queue);
+        }
+        timeForSearch = timeForSearch / numOfRepeations;
+        timeForInsert = timeForInsert / numOfRepeations;
+        addToFile("List.csv", numOfArr, timeForInsert, timeForSearch);
+        QueueNS::deleteQueue(queue);
+    }
+}
+

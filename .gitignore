@@ -45,10 +45,11 @@ sfedu_ictis_ap_dsa
 
 venv/
 *.csv
+*.png
 
 #Delete before final version
 Array.cpp
 Stack.cpp
 List.cpp
 Queue.cpp
-BST.cpp
+
