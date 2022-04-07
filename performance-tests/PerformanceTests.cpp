@@ -70,6 +70,20 @@ void createEmptyFile(const char *fileName) {
 }
 
 
+long checkAddToListTime(DoublyList<int> *arr) {
+    auto start = high_resolution_clock::now();
+    ListNS::addAsAFirst(arr, rand() % 255);
+    auto stop = high_resolution_clock::now();
+    return duration_cast<milliseconds>(stop - start).count();
+}
+
+long checkFindInList(DoublyList<int> *arr) {
+    auto start = high_resolution_clock::now();
+    ListNS::find(arr, rand() % 255);
+    auto stop = high_resolution_clock::now();
+    return duration_cast<nanoseconds>(stop - start).count();
+}
+
 void addToFile(const char *fileName, int size, long insertTime, long searchTime) {
     FILE *f = fopen(fileName, "a");
     fprintf(f, "%d,%lu,%lu\n", size, insertTime, searchTime);
@@ -125,7 +139,7 @@ void PerformanceTestsNS::queuePerformanceTest() {
         long timeForSearch = 0;
         long timeForInsert = 0;
         for (int iter = 0; iter < numOfRepeations; iter++) {
-            timeForSearch += checkEnqueueTime(queue);
+            timeForSearch += checkDequeueTime(queue);
             timeForInsert += checkEnqueueTime(queue);
         }
         timeForSearch = timeForSearch / numOfRepeations;
@@ -137,20 +151,19 @@ void PerformanceTestsNS::queuePerformanceTest() {
 
 void PerformanceTestsNS::listPerformanceTest() {
     createEmptyFile("List.csv");
-    for (int test = 0; test < sizesArray; test++) {
-        int numOfArr = sizes[test];
-        auto *queue = QueueNS::newQueue<int>();
+    for (int numOfArr : sizes) {
+        auto *list = ListNS::newList<int>();
         int numOfRepeations = (int) (seriasRate * (float) numOfArr);
         long timeForSearch = 0;
         long timeForInsert = 0;
         for (int iter = 0; iter < numOfRepeations; iter++) {
-            timeForSearch += checkEnqueueTime(queue);
-            timeForInsert += checkEnqueueTime(queue);
+            timeForSearch += checkFindInList(list);
+            timeForInsert += checkAddToListTime(list);
         }
         timeForSearch = timeForSearch / numOfRepeations;
         timeForInsert = timeForInsert / numOfRepeations;
         addToFile("List.csv", numOfArr, timeForInsert, timeForSearch);
-        QueueNS::deleteQueue(queue);
+        ListNS::deleteList(list);
     }
 }
 

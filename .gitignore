@@ -47,9 +47,5 @@ venv/
 *.csv
 *.png
 
-#Delete before final version
-Array.cpp
-Stack.cpp
-List.cpp
-Queue.cpp
+
 
