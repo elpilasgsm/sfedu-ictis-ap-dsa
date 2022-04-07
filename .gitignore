@@ -42,6 +42,10 @@ Testing/
 sfedu_ictis_ap_dsa
 
 #implementations
+List.cpp
+Array.cpp
+Queue.cpp
+Stack.cpp
 
 venv/
 *.csv
