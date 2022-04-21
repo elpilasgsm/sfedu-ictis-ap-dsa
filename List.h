@@ -78,6 +78,15 @@ namespace ListNS {
     template<typename TYPE>
     void deleteList(DoublyList<TYPE> *list);
 
+    /**
+     * TODO function should properly delete @node. We need delete given node in given list, change head and tail, if necessary. 
+     * @tparam TYPE the type of stored in queue information
+     * @param list the pointer to the list where @node is stored.
+     * @param node the pointer to the node what we need to delete.
+     */
+    template<typename TYPE>
+	void deleteNode(DoublyList<TYPE>* list , DoublyListNode<TYPE>* node ) ;
+    
 }
 
 #endif //SFEDU_ICTIS_AP_DSA_LIST_H
